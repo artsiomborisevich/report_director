@@ -31,10 +31,10 @@ kubectl version
    sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
    ```
 
-   To use specific path:
+   To use specific path add in the end:
 
   ```bash
-   vim ~/.profile then add in the end
+   vim ~/.profile 
    export PATH=$PATH:/usr/local/go/bin
    source ~/.profile
    go version
