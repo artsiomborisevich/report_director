@@ -13,6 +13,7 @@ or if you use proxy bastion
 ```bash
 ssh root@192.168.203.18 -o ProxyCommand="ssh -W %h:%p -q jump_sa@178.124.206.53"
 ```
+___
 
 ### Install kubectl
 
@@ -23,6 +24,7 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version
 ```
+___
 
 ### Install golang https://go.dev/doc/install
 
@@ -39,6 +41,7 @@ kubectl version
    source ~/.profile
    go version
    ```
+___
 
 ### Install k9s to maintain your cluster(it's like Total commander for cluster) https://k9scli.io/
 
@@ -49,6 +52,7 @@ wget https://github.com/derailed/k9s/releases/download/v0.26.7/k9s_Linux_x86_64.
 sudo tar -C /usr/local/bin -xzf k9s_Linux_x86_64.tar.gz
 k9s
 ```
+___
 
 ### Install k3s (lightweight kubernetes) on remote host https://k3s.io/
 
@@ -86,6 +90,8 @@ Check cluster locally:
 ```bash
 kubectl get pods -A
 ```
+___
+
 ### Deploy ingress controller 
 
 browser => hosts => 178.124.206.53 (nginx) -> ingress (app.k8s-18.sa) ->service -> pod (container)
