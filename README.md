@@ -102,3 +102,4 @@ wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/stat
 nginx-controller.yaml
 kubectl get pods -A
 ```
+Then add NodePort to service (exposes the service on a static port on the node's IP address)
