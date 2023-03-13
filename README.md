@@ -20,7 +20,13 @@ ___
 
   ```bash
    vim ~/.profile 
+  ```
+  
+   Add 
+   ```yaml
    export PATH=$PATH:/usr/local/go/bin
+   ```
+   ```bash
    source ~/.profile
    go version
    ```
@@ -32,7 +38,7 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
 ```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version
 ```
 ___
@@ -70,7 +76,7 @@ cat /etc/rancher/k3s/k3s.yaml
 ```
 Then locally (copy this file to your local machine). For example:
 ```bash
-mkdir ~/.kube/ scp -o ProxyCommand="ssh -W %h:%p -q jump_sa@178.124.206.53" root@192.168.203.XX:
+mkdir ~/.kube/ scp -your_user@remote_ip:
 /etc/rancher/k3s/k3s.yaml ~/.kube/config
 ```
 When you start k9s you should see this config
