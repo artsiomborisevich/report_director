@@ -5,24 +5,7 @@
 ### Check ssh connection to your remote server:
 
 ```bash
-ssh root@192.168.203.18
-```
-
-or if you use proxy bastion
-
-```bash
-ssh root@192.168.203.18 -o ProxyCommand="ssh -W %h:%p -q jump_sa@178.124.206.53"
-```
-___
-
-### Install kubectl
-
-https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
-
-```bash
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-kubectl version
+ssh your_user@remote_ip
 ```
 ___
 
@@ -43,13 +26,24 @@ ___
    ```
 ___
 
+### Install kubectl
+
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version
+```
+___
+
 ### Install k9s to maintain your cluster(it's like Total commander for cluster) https://k9scli.io/
 
 Go to https://github.com/derailed/k9s/releases and choose nessesary architecture For example:
 
 ```bash
 wget https://github.com/derailed/k9s/releases/download/v0.26.7/k9s_Linux_x86_64.tar.gz
-sudo tar -C /usr/local/bin -xzf k9s_Linux_x86_64.tar.gz
+tar -C /usr/local/bin -xzf k9s_Linux_x86_64.tar.gz
 k9s
 ```
 ___
